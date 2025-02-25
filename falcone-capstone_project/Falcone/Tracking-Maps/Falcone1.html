@@ -41,7 +41,7 @@
         }).addTo(map);
 
         function fetchGPSData() {
-            const url = `https://api.thingspeak.com/channels/2847164/feeds.json?results=1&t=${new Date().getTime()}`;
+            const url = `https://api.thingspeak.com/channels/2847164/feeds.json?results=1&nocache=${Math.random()}`;
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
